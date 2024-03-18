@@ -1,0 +1,17 @@
+{
+  "name": "binar-fsw-challenge-03",
+  "version": "1.0.0",
+  "description": "Challenge 3 Binar",
+  "main": "server/index.js",
+  "author": "Ananda Ias Falah Surya Gemilang",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}

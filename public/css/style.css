@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    
+}
+
+body {
+    font-family: Helvetica;
+}
+
+nav.navbar {
+    background-color: #F1F3FF;
+}
+
+.navbar-brand {
+    background-color: #0D28A6;
+    width: 100px;
+    height: 34px;
+    margin-top: 25px;
+    /* margin-left: 136px; */
+}
+
+.offcanvas-body ul li a {
+    color: black;
+    margin: 0 10px;
+}
+
+
+/* main section start */
+
+.main-section {
+    height: 100vh;
+    background-color: #F1F3FF;
+    position: relative;
+}
+
+.bg-car::before {
+    content: "";
+    position: absolute;
+    background-color: #0D28A6;
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+    border-radius: 100px 0 0 0;
+}
+
+.tagline h2 {
+    font-weight: bold;
+    margin: 30px 0;
+}
+.tagline a {
+    margin: 30px 0;
+}
+
+.btn.btn-success {
+    border: 1px solid #5CB85F;
+    color: #ffffff;
+    display: inline-block;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn.btn-success:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5CB85F;
+    z-index: -2;
+}
+
+.btn.btn-success:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn.btn-success:hover {
+    color: #5CB85F;
+}
+
+.btn.btn-success:hover:before {
+    width: 100%;
+}
+
+/* end of main section */
+
+/* choose cars section start*/
+
+.fal-container {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+@media (min-width: 576px) {
+  .fal-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .fal-container {
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+  }
+}
+@media (min-width: 992px) {
+  section:not(:first-child, #search, #result) {
+    min-height: 100vh;
+    padding: 0;
+  }
+  .fal-container {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+  }
+
+  #hero {
+    font-size: 2rem;
+  }
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+.search-content {
+  z-index: 4;
+  min-width: 73%;
+  padding: 24px;
+  height: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: -50px;
+}
+
+.input-group {
+  width: 21% !important;
+}
+
+.input-group > .form-control,
+.input-group > .form-select {
+  border-radius: 3px !important;
+  position: relative;
+  flex: 1 1 auto;
+  width: 100% !important;
+  min-width: 0;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3c3c3c;
+}
+
+.item {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.form-control:hover,
+.form-control:focus,
+.form-select:hover,
+.form-select:focus {
+  border: 1px solid #5cb85f;
+  box-shadow: none;
+}
+
+.result-container {
+  text-align: -webkit-center;
+}
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  text-align: left;
+  color: black;
+}
+
+/* end choose cars section */
+
+/* our-services section start*/
+
+.d-flex h3 {
+    font-weight: bold;
+}
+
+.d-flex p .bi-check-lg {
+    background-color: #CFD4ED;
+    color: #0D28A6;
+    border-radius: 15px;
+    padding: 3px 5px;
+}
+
+/* end of our-services section */
+
+/* why-us section start */
+
+.container h3 {
+    font-weight: bold
+}
+
+.why-us .card-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* custom yellow transition */
+
+.why-us .card-body.card-yellow:hover * {
+    z-index: 9;
+    color: white;
+}
+
+.why-us .card-body.card-yellow::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F9CC00;
+    transition: .5s ease;
+    clip-path: circle(7% at 32.3px 35.3px);
+}
+
+.why-us .card-body:hover.card-yellow::before {
+    clip-path: circle(100%);
+    border-radius: 5px;
+}
+
+/* end */
+
+/* custom red transition */
+
+.why-us .card-body.card-red:hover * {
+    z-index: 9;
+    color: white;
+}
+
+.why-us .card-body.card-red::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    border-radius: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: #FA2C5A;
+    transition: .5s ease;
+    clip-path: circle(7% at 32.3px 34.3px);
+}
+
+.why-us .card-body:hover.card-red::before {
+    clip-path: circle(100%);
+    border-radius: 5px;
+}
+
+/* end */
+
+/* custom blue transition */
+
+.why-us .card-body.card-blue:hover * {
+    z-index: 9;
+    color: white;
+}
+
+.why-us .card-body.card-blue::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    border-radius: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: #0D28A6;
+    transition: .5s ease;
+    clip-path: circle(7% at 32.3px 34.3px);
+}
+
+.why-us .card-body:hover.card-blue::before {
+    clip-path: circle(100%);
+    border-radius: 5px;
+}
+
+/* end */
+
+/* custom green transition */
+
+.why-us .card-body.card-green:hover * {
+    z-index: 9;
+    color: white;
+}
+
+.why-us .card-body.card-green::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    border-radius: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: #5CB85F;
+    transition: .5s ease;
+    clip-path: circle(7% at 32.3px 35.3px);
+}
+
+.why-us .card-body:hover.card-green::before {
+    clip-path: circle(100%);
+    border-radius: 5px;
+}
+
+/* end */
+
+.why-us .card-body p:nth-child(2) {
+    margin-top: 5%;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.why-us .card-body .bi {
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 3px 6px;
+    z-index: 1;
+}
+
+/* end of why-us section */
+
+/* testimonial section start */
+.text-center h3 {
+    font-weight: bold;
+}
+
+.banner .container {
+    background-color: #0D28A6;
+    border-radius: 13px;
+    color: white;
+    width: 100%;
+}
+
+.banner .container * {
+    margin: 16px 0;
+}
+
+.carousel-item .card {
+    background-color: #F1F3FF;
+    border: none;
+}
+
+.carousel-item .card .card-body img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bi.bi-chevron-left,
+.bi.bi-chevron-right {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    border: 1px solid black;
+    padding: 3px 10px;
+    border-radius: 35px;
+}
+
+.bi.bi-chevron-left:hover,
+.bi.bi-chevron-right:hover {
+    background-color: #5CB85F;
+    border: 1px solid #5CB85F;
+    color: white;
+}
+
+.bi.bi-star-fill {
+    color: #F9CC00;
+}
+
+.carousel-item img {
+    transition: all .5s;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* end of testimonial section */
+
+/* faq section start */
+
+.cursor-pointer {
+    cursor: pointer;
+    color: black;
+}
+
+.footer .bi {
+    background-color: #0D28A6;
+    margin-right: 16px;
+    border-radius: 15px;
+    padding: 5px 7px;
+    font-size: 18px;
+    color: white;
+    border: 1px solid #0D28A6;
+}
+
+.footer .col-md-2 a {
+    color: black;
+}
+
+.footer .col-md-2 a:hover {
+    color: #0D28A6;
+}
+
+.footer .bi:hover {
+    background-color: white;
+    border: 1px solid #0D28A6;
+    color: #0D28A6;
+    transition: .5s ease;
+}
+
+/* end of faq section */
+
+@media (max-width: 990px) {
+    .main-section {
+        height: auto;
+    }
+
+    .navbar-nav a:hover:not(.btn)::before {
+        content: "> ";
+    }
+
+    .navbar-nav a:hover:not(.btn)::after {
+        content: " <";
+    }
+
+    .navbar-nav a:hover {
+        border-bottom: none !important;
+    }
+}
+
+@media (max-width:767px) {
+    .bg-car::before {
+        height: 30%;
+        width: 90%;
+    }
+}
+
+/* Footer section */
+.footer .navbar-brand {
+    width: 100px;
+    height: 34px;
+    top: 36px;
+    left: 873px;
+}
